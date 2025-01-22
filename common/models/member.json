@@ -1,0 +1,32 @@
+{
+  "name": "Member",
+  "plural": "members",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "role": {
+      "type": "string",
+      "required": true
+    },
+    "team_id": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "team": {
+      "type": "belongsTo",
+      "model": "Team",
+      "foreignKey": "team_id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
