@@ -20,7 +20,8 @@
     "members": {
       "type": "hasMany",
       "model": "Member",
-      "foreignKey": "team_id"
+      "foreignKey": "team_id",
+      "onDelete": "cascade"
     }
   },
   "acls": [],
